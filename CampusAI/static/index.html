@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusAI - Report a Complaint</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>🎓 CampusAI</h1>
+  <a href="/staff">Staff login →</a>
+</header>
+<main>
+  <div class="card">
+    <h2>Report an issue</h2>
+    <label>Select category</label>
+    <div class="cats" id="cats">
+      <div class="cat" data-c="Discipline">🛡️ Discipline<small>Goes to Discipline Head</small></div>
+      <div class="cat" data-c="Cleanliness">🧹 Cleanliness<small>Goes to Peon In-charge</small></div>
+      <div class="cat" data-c="Infrastructure">🏗️ Infrastructure<small>Goes to Director</small></div>
+    </div>
+
+    <label>Photo (optional)</label>
+    <input type="file" id="photo" accept="image/png,image/jpeg,image/webp">
+    <img id="preview" alt="preview">
+
+    <label>Location</label>
+    <div class="row">
+      <input id="location" placeholder="e.g. Block B, 2nd floor washroom">
+      <button class="ghost" type="button" id="gps">📍 Use GPS</button>
+    </div>
+
+    <label>Description</label>
+    <textarea id="desc" placeholder="Describe the problem clearly..."></textarea>
+
+    <label>Your name</label>
+    <input id="name" placeholder="Your name">
+    <label>Roll no. / Student ID</label>
+    <input id="sid" placeholder="Used to track your complaints">
+
+    <button class="full" id="submit">Submit complaint</button>
+    <div id="result"></div>
+  </div>
+
+  <div class="card">
+    <h2>Track my complaints</h2>
+    <div class="row">
+      <input id="trackId" placeholder="Enter Student ID or Ticket (CAI-2026-0001)">
+      <button id="trackBtn">Track</button>
+    </div>
+    <div id="tracked" style="margin-top:14px"></div>
+  </div>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

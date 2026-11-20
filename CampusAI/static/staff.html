@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusAI - Staff Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>🎓 CampusAI · Staff</h1>
+  <span><a href="/">← Student page</a> <a href="#" id="logout" style="display:none;margin-left:12px">Logout</a></span>
+</header>
+<main>
+  <div class="card" id="loginBox">
+    <h2>Staff login</h2>
+    <label>Role</label>
+    <select id="role">
+      <option value="discipline_head">Discipline Head</option>
+      <option value="peon_incharge">Peon In-charge</option>
+      <option value="director">Director</option>
+    </select>
+    <label>PIN</label>
+    <input id="pin" type="password" placeholder="PIN">
+    <button class="full" id="loginBtn">Login</button>
+    <div id="loginMsg"></div>
+  </div>
+
+  <div id="dash" style="display:none">
+    <h2 id="who"></h2>
+    <div class="stats" id="stats"></div>
+    <div class="tabs" id="tabs">
+      <button data-s="" class="on">All</button>
+      <button data-s="pending">Pending</button>
+      <button data-s="in-progress">In-progress</button>
+      <button data-s="resolved">Resolved</button>
+    </div>
+    <div id="list"></div>
+  </div>
+</main>
+<script src="/static/staff.js"></script>
+</body>
+</html>
